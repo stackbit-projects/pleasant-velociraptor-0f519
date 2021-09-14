@@ -1,0 +1,136 @@
+stackbitVersion: ~0.3.0
+ssgName: jekyll
+publishDir: _site
+dataDir: _data
+pagesDir: ''
+models:
+  post:
+    type: page
+    label: Post
+    folder: _posts
+    match:
+      - apa-itu-shell/2020-01-25-apa-itu-shell.md
+      - >-
+        cara-memperbarui-fork-repository/2020-01-29-cara-memperbarui-fork-repository.md
+      - how-this-site-was-made/2018-09-28-how-this-site-was-made.md
+      - welcome-to-jekyll/2020-08-29-welcome-to-jekyll.md
+    fields:
+      - type: string
+        name: title
+        label: Title
+      - type: datetime
+        name: date
+        label: Date
+      - type: datetime
+        name: modified
+        label: Modified
+      - type: list
+        name: tags
+        label: Tags
+        items:
+          type: string
+      - type: string
+        name: description
+        label: Description
+      - type: image
+        name: image
+        label: Image
+      - type: string
+        name: layout
+        label: Layout
+      - type: list
+        name: tag
+        label: Tag
+        items:
+          type: string
+      - type: string
+        name: categories
+        label: Categories
+  post_1:
+    type: page
+    label: Post 1
+    folder: _posts
+    match:
+      - >-
+        python-notes-from-Intro-to-machine-learning/2018-04-14-python-notes-from-Intro-to-machine-learning.md
+      - >-
+        react-component-with-dot-notation/2018-04-07-react-component-with-dot-notation.md
+    fields:
+      - type: string
+        name: title
+        label: Title
+      - type: datetime
+        name: date
+        label: Date
+      - type: list
+        name: tags
+        label: Tags
+        items:
+          type: string
+      - type: string
+        name: description
+        label: Description
+  page_1:
+    type: page
+    label: Page 1
+    match:
+      - 404.md
+    fields:
+      - type: string
+        name: title
+        label: Title
+      - type: number
+        name: layout
+        label: Layout
+        subtype: int
+      - type: string
+        name: permalink
+        label: Permalink
+  page_2:
+    type: page
+    label: Page 2
+    match:
+      - about.md
+      - thanks.md
+    fields:
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: permalink
+        label: Permalink
+      - type: string
+        name: layout
+        label: Layout
+      - type: string
+        name: excerpt
+        label: Excerpt
+      - type: boolean
+        name: comments
+        label: Comments
+  page_3:
+    type: page
+    label: Page 3
+    match:
+      - index.md
+    fields:
+      - type: string
+        name: layout
+        label: Layout
+  menus:
+    type: data
+    label: Menus
+    file: menus.yml
+    isList: true
+    items:
+      type: object
+      fields:
+        - type: string
+          name: title
+          label: Title
+        - type: string
+          name: url
+          label: Url
+        - type: boolean
+          name: external
+          label: External
